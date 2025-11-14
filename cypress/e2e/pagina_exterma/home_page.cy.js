@@ -5,7 +5,7 @@ import link from '../../../cypress/fixtures/home_links.js';
 /**
  * Verificação do conteúdo da home Page do site -> https://opensource-demo.orangehrmlive.com/
  */
-describe('Abrindo o site OrangeHRM', () => {
+describe('Acessando o site da OrangeHRM', () => {
   
   before(() => {
     cy.visit('https://opensource-demo.orangehrmlive.com/');
