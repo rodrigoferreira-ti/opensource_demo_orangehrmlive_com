@@ -1,0 +1,8 @@
+const linksHomePage = {
+  linkedin: 'https://www.linkedin.com/company/orangehrm/mycompany/',
+  facebook: 'https://www.facebook.com/OrangeHRM/',
+  twitter: 'https://twitter.com/orangehrm?lang=en',
+  youtube: 'https://www.youtube.com/c/OrangeHRMInc'
+};
+
+export default linksHomePage;
