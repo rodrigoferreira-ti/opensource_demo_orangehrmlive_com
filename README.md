@@ -1,7 +1,7 @@
-### :robot: Automação de teste com Cypress 
+## :robot: Automação de teste com Cypress 
 
-# :memo: Etapas 
+### :memo: Etapas 
 
-1º - Validação das urls e botões
-2º - Validação de Login e Recuperação de Senha
-3º - A Definir...
+:white_check_mark: 1º - Validação das urls e botões
+:white_check_mark: 2º - Validação de Login e Recuperação de Senha
+:white_check_mark: 3º - A Definir...
