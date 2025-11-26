@@ -34,6 +34,26 @@ describe('Acessando o site da OrangeHRM', () => {
     });
   });
 
+  // Validando se aparece a mensagem de erro ao realizar, login e senha errada.
+  it('Verifica a resposta de mensagem de login inválido!', () => {
+    cy.get('.oxd-form [name="username"]').type('teste1234');
+    cy.get('.oxd-form [name="password"]').type('teste1234');
+    cy.get('.orangehrm-login-button').click();
+    cy.get('[data-v-87fcf455] .oxd-text').should('have.text','Invalid credentials');
+  })
+
+  // Validando se o login é efetuado com sucesso, se acessa o dashboard e depois desloga.
+  it('Efetuar o login com sucesso e voltar a tela principal', () => {
+    cy.get('.oxd-form [name="username"]').type('Admin');
+    cy.get('.oxd-form [name="password"]').type('admin123');
+    cy.get('.orangehrm-login-button').click();
+    cy.url().should('include', '/web/index.php/dashboard/index');
+    cy.get('.oxd-userdropdown-name').click();
+    cy.wait(2000);
+    cy.get('.oxd-dropdown-menu a[href="/web/index.php/auth/logout"]').click();
+    cy.url().should('include', 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
+  })
+
 });
 
 
