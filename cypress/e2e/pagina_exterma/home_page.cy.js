@@ -54,12 +54,12 @@ describe('Acessando o site da OrangeHRM', () => {
     cy.url().should('include', 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
   });
 
-  it.only('Provocando um erro para testar o github actions', () => {
-    cy.get('.oxd-form [name="username"]').type('teste1234');
-    cy.get('.oxd-form [name="password"]').type('teste1234');
-    cy.get('.orangehrm-login-button').click();
-    cy.get('[data-v-87fcf455] .oxd-text').should('have.text','Mensagem errada proposital.');
-  });
+  // it.only('Provocando um erro para testar o github actions', () => {
+  //   cy.get('.oxd-form [name="username"]').type('teste1234');
+  //   cy.get('.oxd-form [name="password"]').type('teste1234');
+  //   cy.get('.orangehrm-login-button').click();
+  //   cy.get('[data-v-87fcf455] .oxd-text').should('have.text','Mensagem errada proposital.');
+  // });
 
 });
 
