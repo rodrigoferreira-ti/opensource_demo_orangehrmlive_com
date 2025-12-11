@@ -22,3 +22,19 @@ jobs:
 
       - name: Executar testes Cypress
         uses: cypress-io/github-action@v6
+      # Após a conclusão do teste, armazene vídeos e quaisquer capturas de tela.
+      - uses: actions/upload-artifact@v4
+        # Adicione a linha abaixo para armazenar capturas de tela somente em caso de falhas.
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
+          if-no-files-found: ignore # 'warn' ou 'error' também estão disponíveis, o padrão é `warn`
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cypress-videos
+          path: cypress/videos
+          if-no-files-found: ignore # 'warn' ou 'error' também estão disponíveis, o padrão é `warn`
+
+
+
